@@ -1,9 +1,10 @@
 package Array;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class s1 {
+public class a1 {
     public static void main(String[] args) {
         int[] my_array1 = {
                 1789, 2035, 1899, 1456, 2013,
@@ -13,7 +14,7 @@ public class s1 {
                 1789, 2035, 1899, 1456, 2013,
                 1458, 2458, 1254, 1472, 2365,
                 1456, 2165, 1457, 2456};
-
+        ArrayList<Integer> arrayList=new ArrayList<>();
 //        采用冒泡排序
         System.out.println("排序前");
 
@@ -30,7 +31,10 @@ public class s1 {
 //        System.out.println(my_array2);
         for(int element:my_array1){
             System.out.println(element);
+            arrayList.add(element);
+
         }
 //        Iterator it = Iterator(my_array2);
+        System.out.println(arrayList);
         }
 }
