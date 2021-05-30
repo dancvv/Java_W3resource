@@ -1,7 +1,7 @@
 package String;
 
 import java.util.Scanner;
-
+//  Write a Java program to get the character (Unicode code point) before the specified index within the String
 public class s3 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

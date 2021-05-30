@@ -1,7 +1,8 @@
 package String;
 //6
+// Write a Java program to compare two strings lexicographically, ignoring case differences.
 
-public class Equal {
+public class s6 {
     public static void main(String[] args) {
         String str1="This is exercise 1";
         String str2="This is Exercise 1";
