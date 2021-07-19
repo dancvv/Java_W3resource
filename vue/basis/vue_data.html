@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <h2>{{school.name}}{{campus}}</h2>
+    <ul>
+        <li>{{campus[0]}}</li>
+        <li>{{campus[2]}}</li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            message:"你好小黑",
+            school:{
+                name:"黑马",
+                mobile:"123"
+            },
+            campus:["北京","上海","广州","深圳"]
+        }
+    })
+</script>
+</body>
+</html>
