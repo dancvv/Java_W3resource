@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" @click="add" value="add method" >
+    <input type="button" @click="sub" value="sub method" >
+    <ul id="list">
+<!--        <li v-for="name in arr">黑马的城市：{{name }}</li>-->
+        <li v-for="(it,index) in arr">{{index}}黑马的城市：{{it}}</li>
+    </ul>
+    <h2 v-for="item in vegetables" v-bind:title="item.name">{{item.name}}</h2>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            arr:["北京","上海","天津","武汉"],
+            vegetables: [
+                {name: "西兰花炒蛋"},
+                {name:"蛋炒饭"}
+            ]
+        },
+        methods:{
+            add:function(){
+                this.vegetables.push({name:"黄瓜拌菜"});
+            },
+            sub:function(){
+                this.vegetables.shift();
+            }
+        }
+    })
+</script>
+</body>
+</html>
