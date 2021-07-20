@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-count</title>
+</head>
+<body>
+<div id="app">
+  <div class="input">
+    <button @click="sub">
+      -
+    </button>
+    <span>{{num}}</span>
+    <button @click="add">+</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  var app=new Vue({
+    el:"#app",
+    data:{
+      num:1
+    },
+    methods:{
+      add:function () {
+        console.log('add')
+        if(this.num>10){
+          alert('别点了')
+        }else {
+          this.num++;
+        }
+
+      },
+      sub:function (){
+        console.log('sub')
+        if(this.num<-10){
+          alert('最小了')
+        }else{
+          this.num--;
+        }
+
+      }
+    }
+  })
+</script>
+</body>
+</html>

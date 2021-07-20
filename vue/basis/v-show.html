@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <img v-show="isShow" src="img.png" ><br>
+  <img v-show="age>=18" src="img.png">
+  <input type="button" value="切换2" @click="addAge">
+  <input type="button" value="切换" @click="changeisShow">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  var app=new Vue({
+    el:"#app",
+    data:{
+      isShow:false,
+      age:15
+    },
+    methods:{
+      changeisShow:function(){
+        this.isShow=!this.isShow;
+      },
+      addAge:function () {
+        this.age++;
+        if(this.age>22){
+          this.age=15;
+        }
+        console.log(this.age)
+        
+      }
+    }
+  })
+</script>
+</body>
+</html>
