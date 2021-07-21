@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .destroy{
+      background: indianred;
+      border: indianred;
+      font-size: 8px;
+    }
+  </style>
+</head>
+<body>
+<div id="todoapp" align="center" >
+  <header class="header">
+    <h2>小黑记事本</h2>
+    <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="input the tasks" class="new-todo">
+  </header>
+  <section class="main">
+    <ul class="todo-list">
+      <li class="todo" v-for="(item,index) in list" type="none">
+        <div class="view">
+          <span class="index">{{index+1}}</span>
+          <label>{{item}}</label>
+          <button class="destroy" @click="remove(index)">Del</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+<!--  v-show显示隐藏内容-->
+  <footer classl="info-first" v-show="list.length!=0">
+    <span class="todolist" v-if="list.length!=0"><strong>{{list.length}}</strong>items left</span>
+    <button @click="clear" class="destroy" v-show="list.length>0">clear</button>
+  </footer>
+  <footer class="info">
+    <p>
+      <a href="baidu.com">BaiduWeb<img src="../basis/img.png" width="50"></a>
+    </p>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script></script>
+<script>
+  var app=new Vue({
+    el:"#todoapp",
+    data:{
+      list:["写代码","eat","sleep"],
+      inputValue:"good good study"
+    },
+    methods:{
+      add:function () {
+        this.list.push(this.inputValue)
+      },
+      remove:function (index) {
+        console.log("delete");
+        console.log(index);
+        this.list.splice(index,1);
+      },
+      clear:function(){
+        this.list=[];
+      }
+    }
+  })
+</script>
+</body>
+</html>

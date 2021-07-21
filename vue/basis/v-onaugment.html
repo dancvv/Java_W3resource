@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" id="name" @click="cli" value="click button">
+    <input type="button"  @click="second(46,'老铁')" value="click button"><br>
+    <input type="text" @keyup="sayHi">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        methods:{
+            cli:function(){
+                console.log("老铁");
+
+            },
+            second:function(p1,p2){
+                console.log(p1,p2)
+            },
+            sayHi:function () {
+                alert("eat")
+            }
+        }
+    })
+</script>
+</body>
+</html>
