@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script></script>
+<h2 align="center" id="app">{{show}}</h2>
+<script>
+  var app=new Vue({
+    el:"#app",
+    data:{
+      show:'tell me',
+    },
+    created(){
+      debugger;
+      console.log("output the truth");
+    },
+    mounted(){
+      debugger
+      console.log("input")
+    }
+
+  })
+</script>
+</body>
+</html>
