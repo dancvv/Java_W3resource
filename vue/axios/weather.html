@@ -6,10 +6,25 @@
 </head>
 <body>
 <script src="main.js"></script>
-<div id="app">
+<div id="app" align="center">
+
     <div classl="yuy">
         <input type="text" v-model="city" @keyup.enter="searchWeather">
     </div>
+    <a @click="changeCity(city='北京')">北京</a>
+    <a @click="changeCity(city='武汉')">武汉</a>
+    <a @click="changeCity(city='上海')">上海</a>
+    <a @click="changeCity(city='天津')">天津</a>
+    <li v-for="item in weather">
+        <span>
+            <span>{{item.date}}</span>
+            <span>{{item.fengli}}</span>
+            <span>{{item.fengxiang}}</span>
+            <span>{{item.low}}</span>
+            <span>{{item.type}}</span>
+        </span>
+    </li>
+    <p id="weather">{{city}}</p>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
